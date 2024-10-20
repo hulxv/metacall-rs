@@ -1,3 +1,4 @@
+pub mod cast;
 #[repr(C)]
 pub enum MetacallValueID {
     MetacallBool = 0,
