@@ -3,5 +3,9 @@
 version = 3
 
 [[package]]
+name = "metacall-bindings"
+version = "0.1.0"
+
+[[package]]
 name = "metacall-rs"
 version = "0.1.0"

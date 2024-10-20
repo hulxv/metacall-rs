@@ -1,6 +1,5 @@
-workspace = { members = ["crates/metacall-bindings"] }
 [package]
-name = "metacall-rs"
+name = "metacall-bindings"
 version = "0.1.0"
 edition = "2021"
 
