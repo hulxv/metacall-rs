@@ -156,4 +156,42 @@ extern "C" {
     ///
     /// Returns zero if successful, and a non-zero value otherwise.
     pub fn metacall_destroy() -> ::std::os::raw::c_int;
+
+    /// Converts the specified value into a serialized string.
+    ///
+    /// # Parameters
+    ///
+    /// - `name`: Name of the serialization format to be used.
+    /// - `v`: Reference to the value to serialize.
+    /// - `size`: Output parameter that will contain the size of the newly allocated string.
+    /// - `allocator`: Pointer to the allocator that will allocate the string.
+    ///
+    /// # Returns
+    ///
+    /// Pointer to a newly allocated string containing the stringified value.
+    pub fn metacall_serialize(
+        name: *const ::std::os::raw::c_char,
+        v: *mut ::std::os::raw::c_void,
+        size: *mut usize,
+        allocator: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_char;
+
+    /// Converts the specified string buffer into a value.
+    ///
+    /// # Parameters
+    ///
+    /// - `name`: Name of the serialization format to be used.
+    /// - `buffer`: String to be deserialized.
+    /// - `size`: Size of the string buffer.
+    /// - `allocator`: Pointer to the allocator that will allocate the value.
+    ///
+    /// # Returns
+    ///
+    /// Pointer to a newly allocated value representing the string. This value must be freed when no longer needed.
+    pub fn metacall_deserialize(
+        name: *const ::std::os::raw::c_char,
+        buffer: *const ::std::os::raw::c_char,
+        size: usize,
+        allocator: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_void;
 }
