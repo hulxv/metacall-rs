@@ -34,9 +34,7 @@ extern "C" {
     /// # Returns
     /// The size of the value in bytes.
     pub fn metacall_value_size(v: *mut ::std::os::raw::c_void) -> usize;
-}
 
-extern "C" {
     /// Returns the number of values that this value contains.
     ///
     /// # Parameters
@@ -45,9 +43,7 @@ extern "C" {
     /// # Returns
     /// The number of values that the referenced value represents.
     pub fn metacall_value_count(v: *mut ::std::os::raw::c_void) -> usize;
-}
 
-extern "C" {
     /// Provides the type identifier (ID) of the value.
     ///
     /// # Parameters
@@ -56,9 +52,7 @@ extern "C" {
     /// # Returns
     /// The type ID assigned to the value.
     pub fn metacall_value_id(v: *mut ::std::os::raw::c_void) -> MetacallValueID;
-}
 
-extern "C" {
     /// Provides the type identifier (ID) in a readable form (as a string).
     ///
     /// # Parameters
@@ -67,9 +61,7 @@ extern "C" {
     /// # Returns
     /// A string related to the type ID.
     pub fn metacall_value_id_name(id: MetacallValueID) -> *const ::std::os::raw::c_char;
-}
 
-extern "C" {
     /// Provides the type identifier (ID) in a readable form (as a string) for the value.
     ///
     /// # Parameters
@@ -80,9 +72,7 @@ extern "C" {
     pub fn metacall_value_type_name(
         v: *mut ::std::os::raw::c_void,
     ) -> *const ::std::os::raw::c_char;
-}
 
-extern "C" {
     /// Deep copies the given value, resetting its reference counter and ownership.
     ///
     /// # Parameters
@@ -91,18 +81,14 @@ extern "C" {
     /// # Returns
     /// A copy of the value on success, or `null` otherwise.
     pub fn metacall_value_copy(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Transfers ownership from the source value to the destination value, including the finalizer.
     ///
     /// # Parameters
     /// * `src`: The source value that will lose ownership.
     /// * `dst`: The destination value that will receive ownership.
     pub fn metacall_value_move(src: *mut ::std::os::raw::c_void, dest: *mut ::std::os::raw::c_void);
-}
 
-extern "C" {
     /// Converts the given value to a boolean.
     ///
     /// # Parameters
@@ -111,9 +97,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a boolean.
     pub fn metacall_value_to_bool(v: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_uchar;
-}
 
-extern "C" {
     /// Converts the given value to a character.
     ///
     /// # Parameters
@@ -122,9 +106,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a character.
     pub fn metacall_value_to_char(v: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_char;
-}
 
-extern "C" {
     /// Converts the given value to a short integer.
     ///
     /// # Parameters
@@ -133,9 +115,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a short integer.
     pub fn metacall_value_to_short(v: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_short;
-}
 
-extern "C" {
     /// Converts the given value to an integer.
     ///
     /// # Parameters
@@ -144,9 +124,7 @@ extern "C" {
     /// # Returns
     /// The value converted to an integer.
     pub fn metacall_value_to_int(v: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
-}
 
-extern "C" {
     /// Converts the given value to a long integer.
     ///
     /// # Parameters
@@ -155,9 +133,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a long integer.
     pub fn metacall_value_to_long(v: *mut ::std::os::raw::c_void) -> ::std::os::raw::c_long;
-}
 
-extern "C" {
     /// Converts the given value to a single-precision floating point.
     ///
     /// # Parameters
@@ -166,9 +142,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a float.
     pub fn metacall_value_to_float(v: *mut ::std::os::raw::c_void) -> f32;
-}
 
-extern "C" {
     /// Converts the given value to a double-precision floating point.
     ///
     /// # Parameters
@@ -177,9 +151,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a double.
     pub fn metacall_value_to_double(v: *mut ::std::os::raw::c_void) -> f64;
-}
 
-extern "C" {
     /// Converts the given value to a C string (null-terminated).
     ///
     /// # Parameters
@@ -188,9 +160,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a C string.
     pub fn metacall_value_to_string(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_char;
-}
 
-extern "C" {
     /// Converts the given value to a memory block (buffer).
     ///
     /// # Parameters
@@ -199,9 +169,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a memory block.
     pub fn metacall_value_to_buffer(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to an array of values.
     ///
     /// # Parameters
@@ -212,9 +180,7 @@ extern "C" {
     pub fn metacall_value_to_array(
         v: *mut ::std::os::raw::c_void,
     ) -> *mut *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to a map (array of tuples).
     ///
     /// # Parameters
@@ -225,9 +191,7 @@ extern "C" {
     pub fn metacall_value_to_map(
         v: *mut ::std::os::raw::c_void,
     ) -> *mut *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to a pointer.
     ///
     /// # Parameters
@@ -236,9 +200,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a pointer.
     pub fn metacall_value_to_ptr(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to a future.
     ///
     /// # Parameters
@@ -247,9 +209,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a future.
     pub fn metacall_value_to_future(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to a function.
     ///
     /// # Parameters
@@ -260,9 +220,7 @@ extern "C" {
     pub fn metacall_value_to_function(
         v: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to null.
     ///
     /// # Parameters
@@ -271,9 +229,7 @@ extern "C" {
     /// # Returns
     /// The value converted to null.
     pub fn metacall_value_to_null(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to a class.
     ///
     /// # Parameters
@@ -282,9 +238,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a class.
     pub fn metacall_value_to_class(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to an object (instance of a class).
     ///
     /// # Parameters
@@ -293,9 +247,7 @@ extern "C" {
     /// # Returns
     /// The value converted to an object.
     pub fn metacall_value_to_object(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to an exception.
     ///
     /// # Parameters
@@ -306,9 +258,7 @@ extern "C" {
     pub fn metacall_value_to_exception(
         v: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Converts the given value to a throwable.
     ///
     /// # Parameters
@@ -319,9 +269,7 @@ extern "C" {
     pub fn metacall_value_to_throwable(
         v: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a boolean value to the specified value.
     ///
     /// # Parameters
@@ -334,9 +282,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         b: ::std::os::raw::c_uchar,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a character to the specified value.
     ///
     /// # Parameters
@@ -349,9 +295,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         c: ::std::os::raw::c_char,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a short integer to the specified value.
     ///
     /// # Parameters
@@ -364,9 +308,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         s: ::std::os::raw::c_short,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns an integer to the specified value.
     ///
     /// # Parameters
@@ -379,9 +321,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         i: ::std::os::raw::c_int,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a long integer to the specified value.
     ///
     /// # Parameters
@@ -394,9 +334,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         l: ::std::os::raw::c_long,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a single-precision floating-point number to the specified value.
     ///
     /// # Parameters
@@ -409,9 +347,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         f: f32,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a double-precision floating-point number to the specified value.
     ///
     /// # Parameters
@@ -424,9 +360,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         d: f64,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a string to the specified value, truncating if necessary.
     ///
     /// This function does not add a null terminator if the string is truncated.
@@ -443,9 +377,7 @@ extern "C" {
         str_: *const ::std::os::raw::c_char,
         length: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns an array to the specified value.
     ///
     /// # Parameters
@@ -460,9 +392,7 @@ extern "C" {
         buffer: *const ::std::os::raw::c_void,
         size: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns an array of values to the specified value.
     ///
     /// # Parameters
@@ -477,9 +407,7 @@ extern "C" {
         values: *mut *const ::std::os::raw::c_void,
         size: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns an array of tuples to the specified value.
     ///
     /// # Parameters
@@ -494,9 +422,7 @@ extern "C" {
         tuples: *mut *const ::std::os::raw::c_void,
         size: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a pointer to the specified value.
     ///
     /// # Parameters
@@ -509,9 +435,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         ptr: *const ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a future to the specified value.
     ///
     /// # Parameters
@@ -524,9 +448,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         f: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a function to the specified value.
     ///
     /// # Parameters
@@ -539,9 +461,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         f: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns a null value to the specified value.
     ///
     /// # Parameters
@@ -550,9 +470,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the value with the assigned null.
     pub fn metacall_value_from_null(v: *mut ::std::os::raw::c_void) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns the specified class to the given value.
     ///
     /// # Parameters
@@ -565,9 +483,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         c: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns the specified object to the given value.
     ///
     /// # Parameters
@@ -580,9 +496,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         o: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns the specified exception to the given value.
     ///
     /// # Parameters
@@ -595,9 +509,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         ex: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Assigns the specified throwable to the given value.
     ///
     /// # Parameters
@@ -610,9 +522,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         th: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Destroys the specified value from the scope stack.
     ///
     /// # Parameters

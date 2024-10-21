@@ -11,9 +11,7 @@ extern "C" {
         v: *mut ::std::os::raw::c_void,
         id: super::MetacallValueID,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a boolean.
     ///
     /// # Parameters
@@ -23,9 +21,7 @@ extern "C" {
     /// The value converted to a boolean.
     pub fn metacall_value_cast_bool(v: *mut *mut ::std::os::raw::c_void)
         -> ::std::os::raw::c_uchar;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a character.
     ///
     /// # Parameters
@@ -34,9 +30,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a character.
     pub fn metacall_value_cast_char(v: *mut *mut ::std::os::raw::c_void) -> ::std::os::raw::c_char;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a short integer.
     ///
     /// # Parameters
@@ -47,9 +41,7 @@ extern "C" {
     pub fn metacall_value_cast_short(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> ::std::os::raw::c_short;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to an integer.
     ///
     /// # Parameters
@@ -58,9 +50,7 @@ extern "C" {
     /// # Returns
     /// The value converted to an integer.
     pub fn metacall_value_cast_int(v: *mut *mut ::std::os::raw::c_void) -> ::std::os::raw::c_int;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a long integer.
     ///
     /// # Parameters
@@ -69,9 +59,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a long integer.
     pub fn metacall_value_cast_long(v: *mut *mut ::std::os::raw::c_void) -> ::std::os::raw::c_long;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a single precision floating point.
     ///
     /// # Parameters
@@ -80,9 +68,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a single precision floating point.
     pub fn metacall_value_cast_float(v: *mut *mut ::std::os::raw::c_void) -> f32;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a double precision floating point.
     ///
     /// # Parameters
@@ -91,9 +77,7 @@ extern "C" {
     /// # Returns
     /// The value converted to a double precision floating point.
     pub fn metacall_value_cast_double(v: *mut *mut ::std::os::raw::c_void) -> f64;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a C string (null-terminated).
     ///
     /// # Parameters
@@ -104,9 +88,7 @@ extern "C" {
     pub fn metacall_value_cast_string(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_char;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a buffer.
     ///
     /// # Parameters
@@ -117,9 +99,7 @@ extern "C" {
     pub fn metacall_value_cast_buffer(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to an array of values.
     ///
     /// # Parameters
@@ -130,9 +110,7 @@ extern "C" {
     pub fn metacall_value_cast_array(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a map.
     ///
     /// # Parameters
@@ -143,9 +121,7 @@ extern "C" {
     pub fn metacall_value_cast_map(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a pointer.
     ///
     /// # Parameters
@@ -156,9 +132,7 @@ extern "C" {
     pub fn metacall_value_cast_ptr(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a future.
     ///
     /// # Parameters
@@ -169,9 +143,7 @@ extern "C" {
     pub fn metacall_value_cast_future(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a function.
     ///
     /// # Parameters
@@ -182,9 +154,7 @@ extern "C" {
     pub fn metacall_value_cast_function(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to null.
     ///
     /// # Parameters
@@ -195,9 +165,7 @@ extern "C" {
     pub fn metacall_value_cast_null(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a class.
     ///
     /// # Parameters
@@ -208,9 +176,7 @@ extern "C" {
     pub fn metacall_value_cast_class(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to an object.
     ///
     /// # Parameters
@@ -221,9 +187,7 @@ extern "C" {
     pub fn metacall_value_cast_object(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to an exception.
     ///
     /// # Parameters
@@ -234,9 +198,7 @@ extern "C" {
     pub fn metacall_value_cast_exception(
         v: *mut *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Implicitly converts the value `v` to a throwable.
     ///
     /// # Parameters

@@ -7,9 +7,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_bool(b: ::std::os::raw::c_uchar) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a character.
     ///
     /// # Parameters
@@ -18,9 +16,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_char(c: ::std::os::raw::c_char) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a short integer.
     ///
     /// # Parameters
@@ -29,9 +25,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_short(s: ::std::os::raw::c_short) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from an integer.
     ///
     /// # Parameters
@@ -40,9 +34,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_int(i: ::std::os::raw::c_int) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a long integer.
     ///
     /// # Parameters
@@ -51,9 +43,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_long(l: ::std::os::raw::c_long) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a single-precision floating point number.
     ///
     /// # Parameters
@@ -62,9 +52,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_float(f: f32) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a double-precision floating point number.
     ///
     /// # Parameters
@@ -73,9 +61,7 @@ extern "C" {
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_double(d: f64) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a constant C string.
     ///
     /// # Parameters
@@ -88,9 +74,7 @@ extern "C" {
         str_: *const ::std::os::raw::c_char,
         length: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value buffer from a memory array.
     ///
     /// # Parameters
@@ -103,9 +87,7 @@ extern "C" {
         buffer: *const ::std::os::raw::c_void,
         size: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value array from an array of values.
     ///
     /// # Parameters
@@ -118,9 +100,7 @@ extern "C" {
         values: *mut *const ::std::os::raw::c_void,
         size: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value map from an array of key-value tuples.
     ///
     /// # Parameters
@@ -133,9 +113,7 @@ extern "C" {
         tuples: *mut *const ::std::os::raw::c_void,
         size: usize,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a pointer.
     ///
     /// # Parameters
@@ -146,9 +124,7 @@ extern "C" {
     pub fn metacall_value_create_ptr(
         ptr: *const ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a future object.
     ///
     /// # Parameters
@@ -159,9 +135,7 @@ extern "C" {
     pub fn metacall_value_create_future(
         f: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a function.
     ///
     /// # Parameters
@@ -172,9 +146,7 @@ extern "C" {
     pub fn metacall_value_create_function(
         f: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a function, binding a closure to it.
     ///
     /// # Parameters
@@ -187,17 +159,13 @@ extern "C" {
         f: *mut ::std::os::raw::c_void,
         c: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value of type null.
     ///
     /// # Returns
     /// A pointer to the created value on success, or null otherwise.
     pub fn metacall_value_create_null() -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a class object.
     ///
     /// # Parameters
@@ -208,9 +176,7 @@ extern "C" {
     pub fn metacall_value_create_class(
         c: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from an object.
     ///
     /// # Parameters
@@ -221,9 +187,7 @@ extern "C" {
     pub fn metacall_value_create_object(
         o: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from an exception.
     ///
     /// # Parameters
@@ -234,9 +198,7 @@ extern "C" {
     pub fn metacall_value_create_exception(
         ex: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
-}
 
-extern "C" {
     /// Creates a value from a throwable object.
     ///
     /// # Parameters
