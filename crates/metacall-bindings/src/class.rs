@@ -1,4 +1,4 @@
-use crate::metacall_value::MetacallValueID;
+use crate::value::MetacallValueID;
 
 extern "C" {
     /// Retrieves a class by its name.

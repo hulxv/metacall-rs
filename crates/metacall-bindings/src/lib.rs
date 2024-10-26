@@ -3,7 +3,7 @@ pub mod class;
 pub mod func;
 pub mod handle;
 pub mod loader;
-pub mod metacall_value;
+pub mod value;
 pub mod object;
 pub mod register;
 pub mod version;

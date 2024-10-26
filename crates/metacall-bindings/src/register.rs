@@ -1,4 +1,4 @@
-use crate::metacall_value::MetacallValueID;
+use crate::value::MetacallValueID;
 
 extern "C" {
     /// Registers a function by name `name` and arguments `va_args`.

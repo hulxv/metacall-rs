@@ -1,4 +1,4 @@
-use crate::metacall_value::MetacallValueID;
+use crate::value::MetacallValueID;
 
 extern "C" {
     /// Calls an object method anonymously using an array of arguments.
