@@ -194,4 +194,38 @@ extern "C" {
         size: usize,
         allocator: *mut ::std::os::raw::c_void,
     ) -> *mut ::std::os::raw::c_void;
+
+    /// Retrieves the value contained within a throwable object.
+    ///
+    /// # Parameters
+    ///
+    /// - `th`: Pointer to the throwable object.
+    ///
+    /// # Returns
+    ///
+    /// Pointer to the value inside the throwable, or `NULL` in case of an error.
+    pub fn metacall_throwable_value(th: *mut ::std::os::raw::c_void)
+        -> *mut ::std::os::raw::c_void;
+
+    /// Provides information about all loaded objects.
+    ///
+    /// # Parameters
+    ///
+    /// - `size`: Size in bytes of the return buffer (output parameter).
+    /// - `allocator`: Pointer to the allocator that will allocate the string.
+    ///
+    /// # Returns
+    ///
+    /// A string containing introspection information about the loaded objects.
+    pub fn metacall_inspect(
+        size: *mut usize,
+        allocator: *mut ::std::os::raw::c_void,
+    ) -> *mut ::std::os::raw::c_char;
+
+    /// Provides information about all loaded objects as a value.
+    ///
+    /// # Returns
+    ///
+    /// Pointer to a value containing introspection information.
+    pub fn metacall_inspect_value() -> *mut ::std::os::raw::c_void;
 }
